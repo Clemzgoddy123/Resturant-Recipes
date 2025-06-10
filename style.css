@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    cursor: pointer;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #444;
+    position: relative;
+    height: 70px;
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+nav ul li{
+    list-style-type: none;
+    position: relative;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+nav ul li:hover{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    height: 15px;
+    width: 100%;
+    text-align: center;
+}
+.menu-icon{
+    color: #fff;
+    font-size: 30px;
+    display:none ;
+}
+.menu-i{
+     font-size: 30px;
+    display:none ;
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    align-items: center;
+    margin: 40px 40px;
+    gap: 30px;
+}
+ul li ul.sub-menu li{
+    display: block;
+    margin-top: 30px;
+    color: #fff;
+    
+    
+}
+ul li ul.sub-menu {
+    width: 100%;
+    background-color:#444;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    
+}
+ul li a:hover {
+  background-color: #444;
+  
+}
+nav ul li:hover ul.sub-menu{
+display: block;
+
+}
+
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: #444;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 0px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .menuList{
+        transition: all 0.s;
+    }
+  
+    ul li ul.sub-menu li{
+        display: initial; 
+        margin-top: 0;
+        
+    }
+    .submenu-service .sub-menu{
+     float: right;   
+    }
+    
+ 
+}
