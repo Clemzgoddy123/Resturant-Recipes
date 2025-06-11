@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div><img src="logopng.png" alt="" style="height: 40px; width: 40px;"></div>
-        <ul id="menuList">
-            <li> <i class="fas fa-house"></i>Home</li>
-            <li class="submenu-service"> <i class="fas fa-briefcase"></i>Service <i class="fas fa-caret-down"></i>
-            <ul class="sub-menu">
-                
-                <li><i class="fas fa-utensils"></i> Food</li>
-                <li><i class="fas fa-hotel"></i>Lodge</li>
-                <li><i class="fab fa-confluence"></i>Consultation</li>
-            </ul>
-            </li>
-            <li> <i class="fas fa-info"></i>About</li>
-            <li> <i class="fas fa-phone"></i>Contact</li>
-        </ul>
-        <div class="menu-icon">
-            <i class="fas fa-sliders" onclick="toggleMenu()"></i>
+        <div class="menu-toggle" id="toggleMenu">
+          <i class="fas fa-sliders"></i>
         </div>
-    </nav>
+        <ul class="nav-list" id="navList">
+          <li><a href="#"><i class="fas fa-house-chimney"></i>Home</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fab fa-servicestack"></i>Service <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"> <i class="fas fa-utensils"></i>Food</a></li>
+              <li><a href="#"><i class="fas fa-hotel"></i>Lodge</a></li>
+              <li><a href="#"><i class="fab fa-confluence"></i>Consultation</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fas fa-qrcode"></i>About</a></li>
+          <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+        </ul>
+      </nav>
+      
     <div class="container" style="margin: 10px 20px;">
         <h2 style=" word-wrap: break-word; font-family: Bradley Hand ITC; font-size: 20px; text-align: center;" >Welcome to DEFOOD Resturant, Here we serve you the best, you will ever dream of having <br> 
             We have different varieties of dishes, Just make your order and we take charge</h2>
@@ -90,18 +91,13 @@
 
 
     <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight ="0px";
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-               menuList.style.maxHeight = "300px";
-        
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-    </script>
+        const toggle = document.getElementById('toggleMenu');
+        const navList = document.getElementById('navList');
+      
+        toggle.addEventListener('click', () => {
+          navList.classList.toggle('active');
+        });
+      </script>
+      
 </body>
 </html>
