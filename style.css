@@ -70,6 +70,7 @@ ul li ul.sub-menu li{
 ul li ul.sub-menu {
     width: 100%;
     background-color:#444;
+    color: #eee;
     position: absolute;
     z-index: 999;
     display: none;
@@ -106,13 +107,22 @@ display: block;
         transition: all 0.s;
     }
   
-    ul li ul.sub-menu li{
-        display: initial; 
-        margin-top: 0;
+    ul li ul.sub-menu {
+    
+        
+        position: fixed;
+       
         
     }
-    .submenu-service .sub-menu{
-     float: right;   
+    ul li ul.sub-menu li{
+      
+        margin-top: 25px;
+       
+         width: 100%;
+        color: #000;
+        
+        
+        
     }
     
  
